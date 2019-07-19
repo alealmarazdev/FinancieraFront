@@ -24,7 +24,7 @@ const contents = {
   'themeThree': {
     'title': 'Estudio de mercado',
     'subtitle':'Aprende los diferentes servicios que necesitas.',
-    'content': [<ContentWriteTwo to='/gameOne'/>],
+    'content': [<ContentWriteTwo to='/gameFour'/>],
     'direccion':'gameOne'
 
   },
@@ -60,4 +60,4 @@ function Theme (props) {
     )
 }
 
-export default Theme;
+export default Theme
