@@ -7,7 +7,6 @@ import Footer from '../../components/UIComponents/Footer'
 import TitleandSubC from '../../components/UIComponents/TitleAndSubtitle'
 import Chatbot from '../../components/UIComponents/Chatbot'
 import PrincipalCardLeft from '../../components/Blogcomponents/PrincipalCardLeft';
-import MiniExampleBlogCard from '../../components/Blogcomponents/minExampleBlogCard';
 import ExampleBlogCard from '../../components/Blogcomponents/exampleBlogCard';
 
 import Brain from '../../asset/image/Blog/Brain.png'
@@ -15,6 +14,10 @@ import Learning from '../../asset/image/Blog/kidslearn.jpg'
 import Smith from '../../asset/image/Blog/AdamSmith.jpg'
 import Galbraith from '../../asset/image/Blog/Galbraith.jpg';
 import Osterwelder from '../../asset/image/Blog/Osterwelder.jpg';
+import Alejandra from '../../asset/image/Blog/Alejandra.jpg'
+import David from '../../asset/image/Blog/David.jpg'
+import Diana from '../../asset/image/Blog/Diana.jpg'
+import Alejandro from '../../asset/image/Blog/Alejandro'
 
 import styles from './index.module.css'
 
@@ -59,12 +62,12 @@ function about () {
             <div className="row">
                 <div className="col-12"><p className="text-center">Conoce al equipo detrás de este sitio</p></div>
                 <div className="col-6">
-                <ExampleBlogCard title="Alejandra Almaráz" bodyText="Alejandra es una developer Fullstack con conocimientos del SAT y Leyes. Puesto: Product Owner, Front and Back. " imageSRC={Smith}/>
-                <ExampleBlogCard title="Alejandro Ochoa" bodyText="Alejandro es un developer Fullstack de Kodemia. Puesto prinicpal del proyecto: Backend" imageSRC={Smith}/>
+                <ExampleBlogCard title="Alejandra Almaráz" bodyText="Alejandra es una developer Fullstack con conocimientos del SAT y Leyes. Puesto: Product Owner, Front and Back. " imageSRC={Alejandra}/>
+                <ExampleBlogCard title="Alejandro Ochoa" bodyText="Alejandro es un developer Fullstack de Kodemia. Puesto prinicpal del proyecto: Backend" imageSRC={Alejandro}/>
                 </div>
                 <div className="col-6">
-                <ExampleBlogCard title="Diana Ramos Fusther" bodyText="Diana es una developer fullstack de Kodemia. Puesto principal del proyecto: Frontend" imageSRC={Smith}/>
-                <ExampleBlogCard title="David Monranchel" bodyText="David es un developer experimentado que fungió como mentor y asesor tecnológico para el proyecto." imageSRC={Smith}/>
+                <ExampleBlogCard title="Diana Ramos Fusther" bodyText="Diana es una developer fullstack de Kodemia. Puesto principal del proyecto: Frontend" imageSRC={Diana}/>
+                <ExampleBlogCard title="David Monranchel" bodyText="David es un developer experimentado que fungió como mentor y asesor tecnológico para el proyecto." imageSRC={David}/>
                 </div>
             </div>
             </div>
