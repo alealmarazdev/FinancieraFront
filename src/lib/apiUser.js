@@ -1,11 +1,11 @@
-export default{
+export default {
   async getUsers() {
     const response = await fetch('http://localhost:8081/users');
 
     const { payload } = await response.json();
 
     const list = payload.users.map((user) => {
-      const {       
+      const {
         fullName: name,
         _id: id,
       } = user;
@@ -17,6 +17,7 @@ export default{
     });
  return list
   },
+
   async deleteUser(id) {
     const response = await fetch(`http://localhost:8081/users/${id}`, {
       method: 'DELETE',
@@ -26,11 +27,12 @@ export default{
     console.log(success)
     return success
   },
+
   async isBloquedForum(id) {
     const response = await fetch(`http://localhost:8081/users/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         isBloquedForum: true }),
     });
 
@@ -53,6 +55,7 @@ export default{
 
     return success
   },
+
   async getUser (userId){
     console.log(userId)
 
@@ -82,6 +85,18 @@ export default{
     const { user } = payload;
 
     return user.score
-  }
+  },
 
+  async login(userInfo) {
+    const endpoint = 'https://fish-nance-back.mybluemix.net/users/auth'
+
+    const request = await fetch(endpoint, {
+      method: 'POST',
+      body: JSON.stringify(userInfo),
+    })
+
+    const result = request.json()
+
+    return result
+  }
 }
