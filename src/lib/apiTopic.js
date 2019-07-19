@@ -1,33 +1,19 @@
+const API_HOST = 'https://fish-nance-back.mybluemix.net'
+
 export default{
     async getTopics() {
-      const response = await fetch('http://localhost:8081/topics');
-  
-      const { payload } = await response.json();
+      const response = await fetch(`${API_HOST}/topics`);
 
-      const list = payload.topics.map((topic) => {
-        const {
-          name: title,
-          description: subtitle,
-          icon: img,
-          isCheck: isDone,
-          _id: id,
-        } = topic;
-  
-        return {
-          title,
-          subtitle,
-          img,
-          id,
-          isDone
-        };
-      });
-   return list
+      const result = await response.json();
+
+      return result
     },
+
     async deleteTopic(id) {
       const response = await fetch(`http://localhost:8081/topic/${id}`, {
         method: 'DELETE',
       });
-  
+
       const { succes } = await response.json();
       console.log(succes)
       return succes
@@ -42,18 +28,18 @@ export default{
           icon: topicInfo.img,
         }),
       });
-  
+
       const { succes } = await response.json();
-  
+
       return succes
     },
     async getTopic (topicId){
       const response = await fetch(`http://localhost:8081/topics/${topicId}`);
-  
+
       const { payload } = await response.json();
-  
+
       const { topic } = payload;
-  
+
       return topic
     },
     async updateTopic(topicId, body) {
@@ -62,10 +48,9 @@ export default{
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       });
-  
+
       const { success } = await response.json();
       return success
     }
-  
+
   }
-  
