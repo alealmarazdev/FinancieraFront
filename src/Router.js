@@ -27,6 +27,28 @@ import Game4 from './views/game4'
 import Game5 from './views/game5'
 import Blog from './views/blog';
 
+function ThemeComponent(props) {
+  const { topicNumber } = props.match.params
+
+  const mapThemes = [
+    ThemeWordOne,
+    ThemeWordTwo,
+    ThemeWordThree,
+    ThemeWordFour,
+    ThemeWordFive,
+    ThemeWordSix,
+    ThemeWordSeven,
+    ThemeWordEight,
+    ThemeWordNine,
+    ThemeWordTen,
+    ThemeWordEleven,
+    ThemeWordTwelve,
+  ];
+
+  const Component =  mapThemes[topicNumber - 1]
+  return <Component />
+}
+
 const Router = () => (
   <Switch>
     <Route
@@ -45,66 +67,11 @@ const Router = () => (
       component={About}
       exact
     />
-     
+
      <Route
-      path="/theme/Word/One"
-      component={ThemeWordOne}
       exact
-    />
-    <Route
-      path="/theme/Word/Two"
-      component={ThemeWordTwo}
-      exact
-    />
-    <Route
-      path="/theme/Word/Three"
-      component={ThemeWordThree}
-      exact
-    />
-    <Route
-      path="/theme/Word/Four"
-      component={ThemeWordFour}
-      exact
-    />
-    <Route
-      path="/theme/Word/Five"
-      component={ThemeWordFive}
-      exact
-    />
-    <Route
-      path="/theme/Word/Six"
-      component={ThemeWordSix}
-      exact
-    />
-    <Route
-      path="/theme/Word/Seven"
-      component={ThemeWordSeven}
-      exact
-    />
-    <Route
-      path="/theme/Word/Eight"
-      component={ThemeWordEight}
-      exact
-    />
-    <Route
-      path="/theme/Word/Nine"
-      component={ThemeWordNine}
-      exact
-    />
-    <Route
-      path="/theme/Word/Ten"
-      component={ThemeWordTen}
-      exact
-    />
-    <Route
-      path="/theme/Word/Eleven"
-      component={ThemeWordEleven}
-      exact
-    />
-    <Route
-      path="/theme/Word/Twelve"
-      component={ThemeWordTwelve}
-      exact
+      path="/theme/Word/:topicNumber"
+      component={ThemeComponent}
     />
     <Route
       path="/theme/:id"
