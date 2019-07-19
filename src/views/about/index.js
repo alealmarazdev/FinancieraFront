@@ -16,10 +16,7 @@ import Alejandra from '../../asset/image/Blog/Alejandra.jpg'
 import David from '../../asset/image/Blog/David.jpg'
 import Diana from '../../asset/image/Blog/Diana.jpg'
 import Alejandro from '../../asset/image/Blog/Alejandro.jpg'
-<<<<<<< HEAD
 import Bloomtaxonomy from '../../asset/image/Blog/BloomTaxonomy.png'
-=======
->>>>>>> 7f7330b28405f38371036a22ec5020319c0c7919
 
 import styles from './index.module.css'
 
