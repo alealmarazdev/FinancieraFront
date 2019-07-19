@@ -1,0 +1,16 @@
+h1 {
+    font-size: 230%;
+    font-weight: bold;
+    color: black; 
+    margin-top: 50px;
+    padding-right: 15%;
+}
+
+h3 {
+    font-size: 150%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding-right: 15%; 
+    font-weight: 550;
+    color: #3AAE9B;
+}

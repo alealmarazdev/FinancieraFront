@@ -1,0 +1,105 @@
+.logo {
+    padding-left: 7%;
+    margin-bottom: 4.5%;
+}
+
+.bgimage {
+    background-image: url('../../asset/image/Background/fishBG.svg');
+    overflow: hidden;
+    width: 100%;
+    background-size: cover;
+}
+
+.BgquoteBg1 {
+    background-image: url('../../asset/image/Background/moneyquoteBg.svg');
+    overflow: hidden;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Bgquote {
+    background-image: url('../../asset/image/Background/Quote.svg');
+    overflow: hidden;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.BgquoteBg2 {
+    background-image: url('../../asset/image/Background/FishquoteBg.svg');
+    overflow: hidden;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.buttonstart {
+    margin-right: 15%;
+}
+
+.girl{
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
+    z-index: 2;
+    top: 150px;
+    left: 170px;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: float 8s infinite;
+
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes float {
+    0% {
+        /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+        transform: translatey(0px);
+    }
+    50% {
+       /*  box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+        transform: translatey(-85px);
+    }
+    100% {
+       /*  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+        transform: translatey(0px);
+    }
+}
+  
+  /* Standard syntax */
+  @keyframes 
+    float {
+        0% {
+            /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+            transform: translatey(0px);
+        }
+        50% {
+           /*  box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+            transform: translatey(-85px);
+        }
+        100% {
+           /*  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+            transform: translatey(0px);
+        }
+    
+    }
+
+@media only screen and (min-width: 768px) {
+
+    .Buttonmed {
+        margin-left:75%
+    }
+
+    .bgimage {
+        background-image: url('../../asset/image/Background/fishBG.svg');
+        overflow: hidden;
+        width: 100%;
+        background-size: cover;
+    }
+
+    
+
+  
+    }
+
+  

@@ -1,0 +1,9 @@
+applications:
+- name: fishnance
+  path: ./build
+  memory: 180M
+  instances: 1
+  buildpacks: 
+    - staticfile_buildpack
+  routes:
+  - route: fishnance-app.mybluemix.net

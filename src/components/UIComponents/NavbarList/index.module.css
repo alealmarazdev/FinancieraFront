@@ -1,0 +1,63 @@
+
+
+.usuarioContainer{
+    width: 200px;
+    height: 50px;
+   /*  border: 1px solid black; */
+}
+.usuarioRow{
+    width: 150px;
+    height: 50px;
+    /* border: 1px solid red; */
+}
+.usuarioRow2{
+    width: 50px;
+    height: 50px;
+   /*  border: 1px solid red; */
+}
+.usuarioName{
+    width: 150px;
+    height: 25px;
+    /* border: 1px solid green; */
+}
+
+.themeArchivement{
+    width: 75px;
+    height: 25px;
+  /*   border: 1px solid tomato; */
+}
+
+.levelArchivement{
+    width: 75px;
+    height: 25px;
+   /*  border: 1px solid lawngreen; */
+}
+
+.numberTheme{
+    width: 32.5px;
+    height: 25px;
+   /*  border: 1px solid navy; */
+}
+
+.imgTheme{
+    width: 32.5px;
+    height: 25px;
+   /*  border: 1px solid navy; */
+}
+
+.numberLevel{
+    width: 32.5px;
+    height: 25px;
+    /* border: 1px solid navy; */
+}
+
+.imgLevel{
+    width: 32.5px;
+    height: 25px;
+/*     border: 1px solid navy; */
+}
+
+.profileImage{
+   /*  width: 20px; */
+   border: 2px solid #3AAE98;
+}

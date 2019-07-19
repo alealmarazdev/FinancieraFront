@@ -1,0 +1,15 @@
+.avatar{
+    width: 30vw;
+}
+.dialogobg{
+    background-image: url('../../asset/image/dialog.svg');
+    background-repeat: no-repeat;
+   width: 20vw;
+   height: 20vw;
+}
+
+.dialogo{
+    position: absolute;
+    top: 295px;
+    left: 34vw;
+}

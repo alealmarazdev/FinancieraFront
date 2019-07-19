@@ -1,0 +1,58 @@
+/* .bgBubble{
+    background-image: url('../../../asset/image/bubble.png');
+    width: 50vw;
+    height: 70vh;
+   /*  filter: blur(8px);
+  -webkit-filter: blur(8px); */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 10px 5px white inset; 
+} */
+
+.bubble{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    z-index: 2;
+    top: 200px;
+    left: 40px;
+    -webkit-animation: mymove 2s infinite; /* Safari 4.0 - 8.0 */
+    animation: float 12s infinite;
+
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes float {
+    100% {
+        /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+        transform: translatey(0px);
+    }
+    50% {
+       /*  box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+        transform: translatey(-55px);
+    }
+    0% {
+       /*  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+        transform: translatey(0px);
+    }
+}
+  
+  /* Standard syntax */
+  @keyframes 
+    float {
+        100% {
+            /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+            transform: translatey(0px);
+        }
+        50% {
+           /*  box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+            transform: translatey(-55px);
+        }
+        0% {
+           /*  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+            transform: translatey(0px);
+        }
+    
+    }
+  

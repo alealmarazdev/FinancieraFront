@@ -1,0 +1,27 @@
+.carta {
+  width: 125px;
+  height: 125px;
+}
+
+.portada {
+  width: 125px;
+  height: 125px;
+  background-image: url('../../../asset/image/CardsImage/card-back.svg');
+  border: 3px solid #3aae98;
+  border-radius: 10px;
+}
+
+.contenido {
+  width: 125px;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 5px solid #3aae98;
+}
+
+.ReactFlipCard {
+  width: 100%;
+  height: 100%;
+}

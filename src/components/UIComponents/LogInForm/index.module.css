@@ -1,0 +1,43 @@
+.userImgSing {
+  width: 150px;
+  height: 150px;
+  filter: invert(59%) sepia(59%) saturate(394%) hue-rotate(119deg) brightness(87%) contrast(95%);
+  border-radius: 50%;
+  top: -60%;
+  position: absolute;
+  right: 34%;
+  background-color: white;
+}
+
+.formGroup {
+  position: relative;
+  border-bottom: 1px solid #e9ecef;
+}
+
+label {
+  font-size: .85em;
+  line-height: 1.764705882em;
+  position: relative;
+  transition: top .3s ease, opacity .3s ease;
+  cursor: default;
+}
+
+.formControl {
+  border-width: 0px 0px 1px 0px; 
+  border-radius: 0;
+  background: 0 0;
+  color: #495057;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 400;
+  height: calc(1.5em + .75rem + .25rem);
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+  padding-right: 0;
+  padding-left: 0;
+  padding: .375rem .75rem;
+  resize: none;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  width: 100%;  
+}

@@ -1,0 +1,10 @@
+.color{
+    background-color: rgba(58, 174, 153, 0.5);
+    border-top: 3px solid #3AAE98;
+    border-bottom: 3px solid #3AAE98;
+    height: 80px;
+}
+
+.color img{
+    height: 50px;
+}

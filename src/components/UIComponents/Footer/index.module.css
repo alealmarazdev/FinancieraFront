@@ -1,0 +1,20 @@
+.footer{
+    border-top: 10px solid #3aae9b;
+    overflow: hidden;
+}
+
+.bootomFooter{
+    background-color: #3aae9b
+}
+.socialICon{
+    filter: invert(1);
+    width: 20px;
+}
+
+.colorCyan{
+    color: #3aae9b
+}
+
+.buttonFooter {
+    margin-left: 30%;
+}

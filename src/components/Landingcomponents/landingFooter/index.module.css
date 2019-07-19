@@ -1,0 +1,13 @@
+.footer{
+    border-top: 10px solid #3aae9b;
+}
+
+.bottomFooter{
+    background-color: #3aae9b;
+    height: 50px;
+    
+}
+.socialICon{
+    filter: invert(1);
+    width: 20px;
+}
