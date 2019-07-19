@@ -17,7 +17,7 @@ import Osterwelder from '../../asset/image/Blog/Osterwelder.jpg';
 import Alejandra from '../../asset/image/Blog/Alejandra.jpg'
 import David from '../../asset/image/Blog/David.jpg'
 import Diana from '../../asset/image/Blog/Diana.jpg'
-import Alejandro from '../../asset/image/Blog/Alejandro'
+import Alejandro from '../../asset/image/Blog/Alejandro.jpg'
 
 import styles from './index.module.css'
 
@@ -74,7 +74,7 @@ function about () {
         <Chatbot/>
         <Footer/>
     </div>
-    )   
+    )
 }
 
-export default about 
+export default about
