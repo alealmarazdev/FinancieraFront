@@ -17,7 +17,7 @@ function ThemeWordFour () {
         <TitleGames title="Estudio de mercado" subtitle="Encuentra tu mercado objetivo"/>
         <div className={styles.bgGame}> </div>
 
-        <Link className={styles.mapeado} to="/theme/themeOne"> 
+        <Link className={styles.mapeado} to="/theme/themeThree"> 
           <h4 className="mb-0 text-center">Nichos de mercado</h4>
           <img src={Crown} alt="nivel"/>
         </Link>

@@ -17,7 +17,7 @@ function ThemeWordThree () {
         <TitleGames title="Administra tus finanzas " subtitle="¿Cómo no morir siendo adulto?"/>
         <div className={styles.bgGame}> </div>
 
-        <Link className={styles.mapeado} to="/theme/themeOne"> 
+        <Link className={styles.mapeado} to="/theme/themeTwo"> 
           <h4 className="mb-0 text-center">Regla 50-20-30</h4>
           <img src={Crown} alt="nivel"/>
         </Link>
