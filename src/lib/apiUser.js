@@ -1,3 +1,6 @@
+// const API_HOST = 'http://localhost:8081'
+const API_HOST = 'https://fish-nance-back.mybluemix.net'
+
 export default {
   async getUsers() {
     const response = await fetch('http://localhost:8081/users');
@@ -56,17 +59,24 @@ export default {
     return success
   },
 
-  async getUser (userId){
-    console.log(userId)
+  async getUser() {
+    const {token, id} = JSON.parse(sessionStorage.getItem('AUTH_DATA'))
 
-    const response = await fetch(`http://localhost:8081/users/${userId}`);
+    const request = await fetch(`${API_HOST}/users/${id}`, {
+      headers: {
+        Authorization: token
+      }
+    });
 
-    const { payload } = await response.json();
+    const result = await request.json();
 
-    const { foundUser } = payload;
+    if (result.payload) {
+      result.payload = result.payload.foundUser
+    }
 
-    return foundUser
+    return result
   },
+
   async updateUser(userId, body) {
     const response = await fetch(`http://localhost:8081/users/${userId}`, {
       method: 'PUT',
@@ -77,6 +87,7 @@ export default {
     const { success } = await response.json();
     return success
   },
+
   async getScore (userId, userScore){
     const response = await fetch(`http://localhost:8081/users/${userId}/${userScore}`);
 
@@ -88,14 +99,19 @@ export default {
   },
 
   async login(userInfo) {
-    const endpoint = 'https://fish-nance-back.mybluemix.net/users/auth'
-
-    const request = await fetch(endpoint, {
+    const request = await fetch(`${API_HOST}/users/auth`, {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(userInfo),
     })
 
-    const result = request.json()
+    const result = await request.json()
+
+    if (result.success) {
+      sessionStorage.setItem('AUTH_DATA', JSON.stringify(result.payload))
+    }
 
     return result
   }

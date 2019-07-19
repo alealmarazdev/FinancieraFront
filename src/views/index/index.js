@@ -21,7 +21,6 @@ import Devices from '../../asset/image/CardsImage/devices.svg'
 import Challenge from '../../asset/image/CardsImage/idea.svg'
 
 
-
 function Index(props) {
 
   const [showModal, setShowModal] = useState(false)
@@ -31,7 +30,7 @@ function Index(props) {
   }
 
   function handleUserLogin(payload) {
-    sessionStorage.setItem('AUTH_TOKEN', payload.token)
+    props.history.push('/curso');
   }
 
   return (
