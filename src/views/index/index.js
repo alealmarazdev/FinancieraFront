@@ -23,7 +23,8 @@ import Challenge from '../../asset/image/CardsImage/idea.svg'
 
 
 function Index(props) {
-  const [showModal, setShowModal] = useState(true)
+
+  const [showModal, setShowModal] = useState(false)
 
   function handleCloseModal (props) {
     setShowModal(false);
