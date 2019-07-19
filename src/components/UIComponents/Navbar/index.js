@@ -11,8 +11,8 @@ function Navbar(props){
   const [state, setState]=useState([])
   useEffect(()=>{
     async function getData(){
-       const user= await apiUser.getUser()
-    setState(user)
+      //const user= await apiUser.getUser()
+    //setState(user)
     }
    getData()
 

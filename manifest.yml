@@ -6,4 +6,4 @@ applications:
   buildpacks: 
     - staticfile_buildpack
   routes:
-  - route: fishnance-app.mybluemix.net
+  - route: fishnanceapp.mybluemix.net

@@ -22,9 +22,9 @@ export default{
       method: 'DELETE',
     });
 
-    const { succes } = await response.json();
-    console.log(succes)
-    return succes
+    const { success } = await response.json();
+    console.log(success)
+    return success
   },
   async isBloquedForum(id) {
     const response = await fetch(`http://localhost:8081/users/${id}`, {
@@ -34,12 +34,13 @@ export default{
         isBloquedForum: true }),
     });
 
-    const { succes } = await response.json();
-    console.log(succes)
-    return succes
+    const { success } = await response.json();
+    console.log(success)
+    return success
 
   },
   async newUser(userInfo) {
+    console.log(userInfo)
     const response = await fetch('http://localhost:8081/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -48,18 +49,20 @@ export default{
       }),
     });
 
-    const { succes } = await response.json();
+    const { success } = await response.json();
 
-    return succes
+    return success
   },
   async getUser (userId){
+    console.log(userId)
+
     const response = await fetch(`http://localhost:8081/users/${userId}`);
 
     const { payload } = await response.json();
 
-    const { user } = payload;
+    const { foundUser } = payload;
 
-    return user
+    return foundUser
   },
   async updateUser(userId, body) {
     const response = await fetch(`http://localhost:8081/users/${userId}`, {
@@ -68,8 +71,8 @@ export default{
       body: JSON.stringify(body),
     });
 
-    const { succes } = await response.json();
-    return succes
+    const { success } = await response.json();
+    return success
   },
   async getScore (userId, userScore){
     const response = await fetch(`http://localhost:8081/users/${userId}/${userScore}`);
