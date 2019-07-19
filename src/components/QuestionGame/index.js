@@ -1,50 +1,66 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-/* import Modal from '../UIComponents/Modal'
-import LogInForm from '../../components/UIComponents/LogInForm/index' */
+import apiUser from '../../lib/apiUser'
 
-function QuestionGame () {
- 
-    
+import Modal from './../UIComponents/Modal'
+import Button from '../UIComponents/ButtonFullWidth'
 
-     return (
+
+const questionData = {
+  theme: '5d31f2c78f473d0070286970',
+  question: '¿Qué es un ingreso?',
+  options: [
+      'Es todo objeto que ingresa al haber patrimonial',
+      'Es todo objeto que ingresa al haber patrimonial',
+      'Es todo objeto que ingresa al haber patrimonial',
+      'Es todo objeto que ingresa al haber patrimonial',
+  ],
+  answer: 3,
+}
+
+
+function QuestionGame({onDone}) {
+  const [showModal, setShowModal] = useState(false)
+
+  function reviewAnswer(ev) {
+    const optSelected = parseInt(ev.target.value)
+
+    if (optSelected === questionData.answer) {
+      setShowModal(true)
+    }
+  }
+
+  async function handleAccept() {
+    await apiUser.updateScore(questionData.theme)
+    onDone()
+  }
+
+  return (
+    <React.Fragment>
       <div className="mx-auto d-table my-5">
-          <h4 className="mb-3">¿Qué es un ingreso?</h4>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend mr-2">
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input " />
-                </div>
-            </div>
-            <label >Es todo objeto que ingresa al haber patrimonial</label>
-            </div>
-            <div class="input-group mb-3">
-            <div class="input-group-prepend mr-2">
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input"/>
-                </div>
-            </div>
-            <label>Es todo objeto que ingresa al haber patrimonial</label>
-            </div>
-            <div class="input-group mb-3">
-            <div class="input-group-prepend mr-2">
-                <div class="input-group-text">
-                <input type="checkbox" aria-label="Checkbox for following text input"/>
-                </div>
-            </div>
-            <label>Es todo objeto que ingresa al haber patrimonial</label>
-            </div>
-            <div class="input-group mb-3">
-            <div class="input-group-prepend mr-2">
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input"/>
-                </div>
-            </div>
-            <label>Es todo objeto que ingresa al haber patrimonial</label>
-            </div>
-           
-      </div>
-    )
-     }
+        <h4 className="mb-3">{questionData.question}</h4>
 
-export default QuestionGame;
+        {questionData.options.map((option, indx) => (
+          <label key={indx} class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="radio" name="answer" value={indx + 1} onChange={reviewAnswer}/>
+              </div>
+            </div>
+            <span class="form-control">{option}</span>
+          </label>
+        ))}
+      </div>
+
+      <Modal isOpen={showModal} title='¡Felicidades!' buttons={
+        <Button Title="Aceptar" handleClick={handleAccept}/>
+      }
+      classes={{ header: 'text-success' }}
+      >
+        <strong>Sigue jugando para seguir aprendiendo y ganar muchos puntos de experiencia</strong>
+      </Modal>
+    </React.Fragment>
+  )
+}
+
+export default QuestionGame

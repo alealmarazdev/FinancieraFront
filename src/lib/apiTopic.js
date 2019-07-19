@@ -1,4 +1,4 @@
-const API_HOST = 'https://fish-nance-back.mybluemix.net'
+import {API_HOST} from './utils'
 
 export default{
     async getTopics() {

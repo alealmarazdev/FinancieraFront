@@ -2,7 +2,16 @@ import React, {useState, useEffect} from 'react'
 
 import styles from './index.module.css';
 
-function Modal({isOpen = false, title = '', children, buttons = null, onClose= null}) {
+function Modal({
+  isOpen = false,
+  title = '',
+  children,
+  buttons = null,
+  onClose = null,
+  classes = {
+    header: ''
+  }
+}) {
   const [open, setOpen] = useState(isOpen)
 
   useEffect(() => {
@@ -16,7 +25,7 @@ function Modal({isOpen = false, title = '', children, buttons = null, onClose= n
           <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className={`modal-header d-flex justify-content-center ${styles.modalHead}`}>
-                <h5 className="modal-title" id="exampleModalLiveLabel">
+                <h5 className={`modal-title ${classes.header}`}>
                   {title}
                 </h5>
                 {onClose && (<button type="button" className="close" data-dismiss="modal" aria-label="Close">

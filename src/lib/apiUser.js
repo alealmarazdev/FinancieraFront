@@ -1,5 +1,4 @@
-// const API_HOST = 'http://localhost:8081'
-const API_HOST = 'https://fish-nance-back.mybluemix.net'
+import {API_HOST} from './utils'
 
 export default {
   async getUsers() {
@@ -77,8 +76,22 @@ export default {
     return result
   },
 
+  async updateScore(idTheme) {
+    const {id} = JSON.parse(sessionStorage.getItem('AUTH_DATA'))
+
+    const response = await fetch(`${API_HOST}/users/score/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ idTheme }),
+    });
+
+    const result = await response.json();
+
+    return result
+  },
+
   async updateUser(userId, body) {
-    const response = await fetch(`http://localhost:8081/users/${userId}`, {
+    const response = await fetch(`${API_HOST}/users/${userId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
@@ -88,7 +101,7 @@ export default {
     return success
   },
 
-  async getScore (userId, userScore){
+  async getScore(userId, userScore){
     const response = await fetch(`http://localhost:8081/users/${userId}/${userScore}`);
 
     const { payload } = await response.json();
