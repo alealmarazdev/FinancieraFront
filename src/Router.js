@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Index from './views/index/index';
 import Content from './views/content'
+import About from './views/about'
 
 import ThemeWordOne from './views/themeWordOne/index'
 import ThemeWordTwo from './views/themeWordTwo/index'
@@ -36,6 +37,12 @@ const Router = () => (
      <Route
       path="/curso"
       component={Content}
+      exact
+    />
+
+    <Route
+      path="/sobreNosotros"
+      component={About}
       exact
     />
      

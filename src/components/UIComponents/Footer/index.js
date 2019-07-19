@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import apiUser from '../../../lib/apiUser';
 
-/* import {Link} from 'react-router-dom' */
+import {Link} from 'react-router-dom';
 import SignInForm from '../../UIComponents/SignInForm/index'
 import Modal from '../../UIComponents/Modal'
 import ButtonFullWidth from '../../../components/UIComponents/ButtonFullWidth';
@@ -34,6 +34,7 @@ function Footer(props) {
         <div className={`card-body col-12 col-md-3`}>
 
           <p className={`card-text py-0 my-0 ${styles.colorCyan}`}>CONTACTO.</p>
+          <p className={` ${styles.colorCyan}`}>SOBRE NOSOTROS.</p>
           <p className={`card-text py-0 my-0  ${styles.colorCyan}`}>SOBRE NOSOTROS.</p>
           <p className={`card-text py-0 my-0  ${styles.colorCyan}`}>APRENDE.</p>
           <p className={`card-text py-0 my-0  ${styles.colorCyan}`}>COLABORA.</p>
