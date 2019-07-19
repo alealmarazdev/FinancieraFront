@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {Link} from 'react-router-dom'
-
 import Navbar from '../../components/UIComponents/Navbar'
 import Footer from '../../components/UIComponents/Footer'
 import TitleandSubC from '../../components/UIComponents/TitleAndSubtitle'
@@ -17,7 +15,8 @@ import Osterwelder from '../../asset/image/Blog/Osterwelder.jpg';
 import Alejandra from '../../asset/image/Blog/Alejandra.jpg'
 import David from '../../asset/image/Blog/David.jpg'
 import Diana from '../../asset/image/Blog/Diana.jpg'
-import Alejandro from '../../asset/image/Blog/Alejandro'
+import Alejandro from '../../asset/image/Blog/Alejandro.jpg'
+import Bloomtaxonomy from '../../asset/image/Blog/BloomTaxonomy.png'
 
 import styles from './index.module.css'
 
@@ -37,6 +36,9 @@ function about () {
                 </div>
                 <div className="col-12 col-md-6">
                 <PrincipalCardLeft title="Taxonomía del Conocimiento" bodyText="Creado por Benjamin Bloom" imageSRC={Learning}/>
+                </div>
+                <div className= {`${styles.bloom} col-12 mt-5`}>
+                <PrincipalCardLeft imageSRC={Bloomtaxonomy}/>
                 </div>
             </div>
         </div>

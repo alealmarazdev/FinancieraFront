@@ -34,8 +34,9 @@ function Footer(props) {
         <div className={`card-body col-12 col-md-3`}>
 
           <p className={`card-text py-0 my-0 ${styles.colorCyan}`}>CONTACTO.</p>
+          <Link to="/sobreNosotros">
           <p className={` ${styles.colorCyan}`}>SOBRE NOSOTROS.</p>
-          <p className={`card-text py-0 my-0  ${styles.colorCyan}`}>SOBRE NOSOTROS.</p>
+        </Link>
           <p className={`card-text py-0 my-0  ${styles.colorCyan}`}>APRENDE.</p>
           <p className={`card-text py-0 my-0  ${styles.colorCyan}`}>COLABORA.</p>
           <p className={`card-text py-0 my-0  ${styles.colorCyan}`}>JUEGA.</p>
