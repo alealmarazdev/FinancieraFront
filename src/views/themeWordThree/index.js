@@ -1,66 +1,52 @@
 import React from 'react';
-/* import FlipCard from '@kennethormandy/react-flipcard'
- import '@kennethormandy/react-flipcard/dist/Flipcard.css' */
+
 import {Link} from 'react-router-dom'
 
 import TitleGames from '../../components/UIComponents/TitleAndSubtitle'
 import Navbar from '../../components/UIComponents/Navbar'
 import Chatbot from '../../components/UIComponents/Chatbot'
 import Crown from '../../asset/image/Icons/crown.svg'
-/* import Lock from '../../asset/image/Icons/lock.svg' */
-/* import ButtonLink from '../../components/UIComponents/ButtonLink/index' */
+import Next from '../../asset/image/Icons/Next.svg'
 
 import styles from './index.module.css'
 
-function ThemeWordOne () {
+function ThemeWordThree () {
      return (
       <div >
         <Navbar />
-        <TitleGames title="Conceptos básicos" subtitle="Aprende las bases para iniciar"/>
+        <TitleGames title="Administra tus finanzas " subtitle="¿Cómo no morir siendo adulto?"/>
         <div className={styles.bgGame}> </div>
 
         <Link className={styles.mapeado} to="/theme/themeOne"> 
-          <h4 className="mb-0 text-center">Emprender</h4>
-          {/* <FlipCard flipped={this.props.estaSiendoComparada || this.props.fueAdivinada}
-          disabled={false} type="revolving-door"
-        >   */}
+          <h4 className="mb-0 text-center">Regla 50-20-30</h4>
           <img src={Crown} alt="nivel"/>
-          {/* <img src={Lock}/> */}
-          {/* </FlipCard>   */}
         </Link>
 
         <Link className={styles.mapeado1} to="/theme/themeOne">
-          <h4 className="mb-0 text-center">Personas ante la ley.</h4>
+          <h4 className="mb-0 text-center">Presupuestos</h4>
           <img src={Crown} alt="nivel"/>
         </Link>  
-        <div className={styles.bgContinue}> </div>
+        <div className={styles.bgContinue}>Las 3 cuentas</div>
 
         <Link className={styles.mapeado2} to="/theme/themeOne">
-        <h4 className="mb-0 text-center">Fines de las sociedades.</h4>
+        <h4 className="mb-0 text-center">Disciplina</h4>
           <img src={Crown} alt="nivel"/>
         </Link>
       
         <Link className={styles.mapeado3} to="/theme/themeOne">
-        <h4 className="mb-0 text-center">Registros.</h4>
+        <h4 className="mb-0 text-center">Inversiones</h4>
           <img src={Crown} alt="nivel"/>
         </Link>
+
         <Link className={styles.mapeado4} to="/curso">
         <h4 className="mb-0 text-center">Siguiente tema.</h4>
-          <img src={Crown} alt="nivel"/>
+          <img src={Next} alt="nivel"/>
         </Link>
-        {/* <div className={styles.mapeado6}>
-          
-        </div>
-        <div className={styles.mapeado7}>
-          <img src={Lock}/>
-        </div>
-        <div className={styles.mapeado8}>
-          <img src={Lock}/>
-        </div> */}
+         
         <Chatbot />
-        
+
       </div>
     )
 }
 
-export default ThemeWordOne;
+export default ThemeWordThree;

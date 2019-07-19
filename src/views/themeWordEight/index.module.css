@@ -1,91 +1,95 @@
- .bgGame{
- background-image: url('../../asset/image/Background/bg-img_top.svg');
- width: 100vw;
- height: 50vh;
- position: absolute;
- left: 32vw;
- top: 54vh;
- background-repeat: no-repeat;
- background-size: inherit;
-
-}
- 
-.mapeado {
-    position: absolute;
-    top: 42vh;
-    left: 47vw;
-    display: flex;
-    flex-direction: column
-}
- .mapeado img{
-    width:100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mapeado1 {
-    position: absolute;
-    top: 66vh;
-    left: 22vw;
-    display: flex;
-    flex-direction: column
-}
-.mapeado1 img{
-    width:100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mapeado2 {
-    position: absolute;
-    top: 90vh;
-    left: 55vw;
-    display: flex;
-    flex-direction: column
-}
-.mapeado2 img{
-    width:100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bgContinue{
-    background-image: url('../../asset/image/Background/bg-img_repeat.svg');
-    width: 100vw;
+.bgGame{
+    background-image: url('../../asset/image/Background/bg-img_top.svg');
+    width: 45vw;
     height: 50vh;
     position: absolute;
-    left: 28vw;
-    top: 105vh;
-    background-repeat: no-repeat
-}
-
-.mapeado3 {
-    position: absolute;
-    top: 115vh;
-    left: 24vw;
-    display: flex;
-    flex-direction: column
-}
-.mapeado3 img{
-    width:100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mapeado4 {
-    position: absolute;
-    top: 138vh;
-    left: 55vw;
-    display: flex;
-    flex-direction: column
-}
-.mapeado4 img{
-    width:100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    left: 32.1%;
+    top: 55vh;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    overflow: hidden; 
+   
+   
+   }
+   
+   .mapeado {
+   
+       position: absolute;
+       top: 40vh;
+       left: 44vw;
+       display: flex;
+       flex-direction: column
+   }
+    .mapeado img{
+       width:100px;
+       height: 100px;
+     
+   }
+   
+   .mapeado1 {
+       position: absolute;
+       top: 63vh;
+       left: 25vw;
+       display: flex;
+       flex-direction: column
+   }
+   .mapeado1 img{
+       width:100px;
+       height: 100px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   
+   .mapeado2 {
+       position: absolute;
+       top: 87vh;
+       left: 55vw;
+       display: flex;
+       flex-direction: column
+   }
+   .mapeado2 img{
+       width:100px;
+       height: 100px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   
+   .bgContinue{
+       background-image: url('../../asset/image/Background/bg-img_repeat.svg');
+       width: 45vw;
+       height: 50vh;
+       position: absolute;
+       left: 28vw;
+       top: 105vh;
+       background-repeat: no-repeat;
+       margin-top: 0px;
+       margin-bottom: 0px;
+   }
+   
+   .mapeado3 {
+       position: absolute;
+       top: 115vh;
+       left: 24vw;
+       display: flex;
+       flex-direction: column
+   }
+   .mapeado3 img{
+       width:100px;
+       height: 100px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   
+   .mapeado4 {
+       position: absolute;
+       top: 140vh;
+       left: 55vw;
+       display: flex;
+       flex-direction: column
+   }
+   .mapeado4 img{
+       width:100px;
+       height: 100px;
+       margin-left: auto;
+       margin-right: auto;
+   } 
