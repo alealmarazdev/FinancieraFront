@@ -1,4 +1,7 @@
 import React, { useState, useRef } from 'react'
+
+import {API_HOST} from '../../../lib/utils'
+
 import styles from './index.module.css'
 import Question from '../../../asset/image/question2.svg'
 import Minimize from '../../../asset/image/minimize.svg'
@@ -30,7 +33,7 @@ function Chatbot() {
 
     sound.play();
 
-    const apiUrl = `https://fishnance-back.mybluemix.net/sendMessage?message=${state.question}`
+    const apiUrl = `${API_HOST}/sendMessage?message=${state.question}`
 
     const apiCall = await fetch(apiUrl, {
       method: 'GET',
